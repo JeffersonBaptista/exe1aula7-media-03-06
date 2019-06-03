@@ -36,7 +36,7 @@ public class AppMedia {
 		}
 		
 		calculaMedia(divisor, total);
-		System.out.println("\nNumeros que não entraram na media\nnononon\nnononon\n");
+		System.out.println("\nNumeros que não entraram na media\n");
 		imprimirLista(numerosImpares);
 
 	}

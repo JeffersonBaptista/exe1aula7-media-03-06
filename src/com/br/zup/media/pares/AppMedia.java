@@ -12,11 +12,14 @@ public class AppMedia {
 
 		int total = 0;
 		int controle = 1;
+		int divisor = 0;
 
 		List<Integer> numerosImpares = new ArrayList<Integer>();
 
 		while (controle == 1) {
-			System.out.println("Digite um numero para o calculo");
+			
+			System.out.println("Digite um numero para o calculo\n "
+					+ "Digite 0 para sair ");
 			int numero = scan.nextInt();
 
 			if (numero == 0) {
@@ -24,12 +27,17 @@ public class AppMedia {
 				controle = 0;
 
 			} else if (numero % 2 == 0) {
+				divisor++;
 				total += numero;
 			} else {
 				numerosImpares.add(numero);
 			}
 
 		}
+		
+		calculaMedia(divisor, total);
+		System.out.println("\nNumeros que não entraram na media\nnononon\nnononon\n");
+		imprimirLista(numerosImpares);
 
 	}
 
@@ -39,7 +47,17 @@ public class AppMedia {
 	}
 
 	public static void calculaMedia(int divisor, int total) {
-		System.out.println("Media entre os numeros pares -> " + total / divisor);
+	//	double media =(total / divisor);
+		System.out.println("Media entre os numeros pares -> "+ (total / divisor));
+	}
+	
+	public static void imprimirLista(List lista) {
+		
+		for (Object object : lista) {
+			
+			System.out.println(object);
+		}
+		
 	}
 
 }
